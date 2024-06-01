@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ezequiel">
+    <title>Ezequiel</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/dist/css/theme-elements.css">
+    <link rel="stylesheet" href="assets/dist/css/default.css">
+    <link rel="stylesheet" href="assets/vendor/sweetalert/sweetalert.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/dist/css/app.css">
+
+    <link rel="stylesheet" href="assets/dist/css/simple-line-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+
+    <script src="assets/dist/js/modernizr.min.js"></script>
+
+    <style>
+        #text-footer {
+            font-family: 'Arial', sans-serif;
+            font-size: 2rem;
+            color: #00f;
+            text-align: center;
+            text-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #00f,
+                0 0 30px #00f,
+                0 0 40px #00f,
+                0 0 50px #00f,
+                0 0 75px #00f;
+            animation: neon 1.5s infinite alternate;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #00f,
+                    0 0 30px #00f,
+                    0 0 40px #00f,
+                    0 0 50px #00f,
+                    0 0 75px #00f;
+            }
+
+            to {
+                text-shadow: 0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px #00f,
+                    0 0 40px #00f,
+                    0 0 50px #00f,
+                    0 0 60px #00f,
+                    0 0 70px #00f,
+                    0 0 100px #00f;
+            }
+        }
+
+        .neon-border {
+            position: relative;
+            padding: 0px;
+            border-radius: 5px;
+            /* Ajusta esto según sea necesario para redondear los bordes */
+        }
+
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px solid #f2db0d;
+            border-radius: 5px;
+            /* Asegúrate de que coincida con el borde del contenedor */
+            box-shadow: 0 0 5px #f2db0d, 0 0 10px #f2db0d, 0 0 15px #f2db0d;
+            z-index: -1;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        /* Media query para dispositivos de escritorio */
+        @media (min-width: 768px) {
+            #gifElement {
+                width: auto;
+                /* Ancho automático del GIF en dispositivos de escritorio */
+            }
+        }
+
+        .nova-square-regular {
+            font-family: "Nova Square", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .swal2-popup {
+            border-left: 6px solid #F39C12;
+            color: #00f377;
+        }
+
+        .swal2-content {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="body"
+        style="background-image: url('assets/resources/img/background.jpg');background-size: cover;background-repeat: no-repeat;background-attachment: fixed;background-position: center;min-height: 120vh;">
+
+        <div class="sticky-top bg-dark">
+            <div style="background-color: #f08112" class="pb-1">
+
+            </div>
+            <div class="p-2">
+                <img src="assets/resources/img/freefire_sin_fondo.png" width="150px" alt="">
+            </div>
+        </div>
+        <div role="main" class="main">
+
+            <div class="container my-2 mb-5">
+                <div class="col-sm-12">
+                    <div class="row justify-content-center">
+                        <a href="javascript:void(0)" onclick="addGreenBorder(this)">
+                            <img src="assets/resources/img/socials/facebook.png" width="40px" class="px-2" alt="">
+                        </a>
+
+                        <a href="javascript:void(0)" onclick="addGreenBorder(this)">
+                            <img src="assets/resources/img/socials/vk.png" width="40px" class="px-2" alt="">
+                        </a>
+
+                        <a href="javascript:void(0)" onclick="addGreenBorder(this)">
+                            <img src="assets/resources/img/socials/google.png" width="40px" class="px-2" alt="">
+                        </a>
+
+                        <a href="javascript:void(0)" onclick="addGreenBorder(this)">
+                            <img src="assets/resources/img/socials/mac-os-logo.png" width="40px" class="px-2" alt="">
+                        </a>
+
+                        <a href="javascript:void(0)" onclick="addGreenBorder(this)">
+                            <img src="assets/resources/img/socials/twitter.png" width="40px" class="px-2" alt="">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+
+                    <div class="pt-2" style="background-color: rgba(0, 0, 0, 0.4)">
+                        <h3 class="text-center text-white mb-0"
+                            style="font-family: 'Nova Square', sans-serif; text-transform: none;">Sitio de canje de
+                            recompensas</h3>
+                        <p class="lead text-center text-white">Canjá tu código</p>
+                    </div>
+
+                    <div class="alert p-0">
+
+                        <input type="number" class="form-control form-control-sm text-1 text-dark"
+                            style="border: 2px solid #F4D03F; height: 35px;" id="insert-your-id" placeholder="Coloca tu ID">
+                        <button type="button" id="generate" class="btn btn-primary mt-2">Confirmar</button>
+
+                    </div>
+
+                    <div class="alert mt-3" style="background-color: rgba(255, 255, 255, 0.8)">
+                        <h5 class="mb-0">Aviso importante</h5>
+                        <p class="text-dark">
+                            1. El código de canje tiene <span class="text-danger">12/16</span> caracteres, que consisten
+                            en letras mayúsculas y números.
+                            <br>
+                            2. Las recompensas de los artículos se muestra en la pestaña <span
+                                class="text-danger">[bóveda]</span> en el vestíbulo del juego; los oros o diamantes se
+                            añadirán a la cartera de la cuenta automáticamente.
+                            <br>
+                            3. Tenga en cuenta la fecha de caducidad del canje. No se puede canjear ningún código
+                            caducado.
+                            <br>
+                            4. Póngase en contacto con el servicio de atención al cliente si ha tenido algún problema.
+                            <br>
+                            5. Recordatorio: no podrás canjear tus recompensas con cuentas de invitado. Puedes vincular
+                            tu cuenta a Facebook o VK para recibir las recompensas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Vendor Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/vendor/libs/common.min.js"></script>
+    <script src="assets/vendor/libs/isotope.min.js"></script>
+    <script src="assets/dist/js/theme.js"></script>
+    <script src="assets/dist/js/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <script src="assets/dist/js/app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        function addGreenBorder(element) {
+            // Remover el borde verde de todos los elementos
+            var allLinks = document.querySelectorAll('a');
+            allLinks.forEach(function (link) {
+                link.style.border = 'none';
+            });
+            // Agregar borde verde al elemento clicado
+            element.style.border = '3px solid green';
+        }
+    </script>
+
+</body>
+
+</html>
